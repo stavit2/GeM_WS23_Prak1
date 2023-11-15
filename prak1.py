@@ -99,7 +99,7 @@ import matplotlib.pyplot as plt
 messung = np.load('messung.npy')#loading measurement
 messungTransposed = np.transpose(messung)#transposing matrix to 1 column
 
-t = np.linspace(0,1/50, 1920)#timespan 50Hz
+t = np.linspace(0,1/25, 1920)#timespan 25Hz
 
 plt.subplot(2,1,1)
 plt.plot(t[500:1460],messungTransposed[500:1460])#plotting 1 period
@@ -158,7 +158,7 @@ import matplotlib.pyplot as plt
 def angle(t):
     return 1/2*(np.tanh(t-5) + 1)*35#Calculating angle
 
-t = np.linspace(0,10,11)#time vector t:[0;10]
+t = np.linspace(0,10,100)#time vector t:[0;10]
 
 angles = np.array(angle(t))#angle vector for t
 voltage = np.vectorize(angle2voltage)(angles)#voltage vector
